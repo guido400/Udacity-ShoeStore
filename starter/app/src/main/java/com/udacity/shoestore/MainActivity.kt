@@ -10,5 +10,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Timber.plant(Timber.DebugTree())
+        setSupportActionBar(findViewById(R.id.toolbar))
+
+
+
     }
 }

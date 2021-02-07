@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="new_login">New Login</string>
+    <string name="existing_login">Existing Login</string>
+    <string name="welcome">Welcome dear customer, today you will have a possibility to enjoy walking like never before.
+        We sell life changing products called shoes, which will protect your lovely feet from cold snow and hot sands. That will save you from thorns and splinters. That will make you look fabulous from bottom to top!
+
+    </string>
+    <string name="enter_the_store">Click here to enter the store!</string>
+    <string name="enter">Enter</string>
+    <string name="onboarding_instructions">Hello customer, did you know that we are not the company that sells you just one type of shoe? Intimidated by what comes next? Well, browsing our store goes like this: first click the Enter button, then scroll up and down till you feel that connection. Then click on that beauty and not before long it will be yours. We believe in your ability to make important decisions!</string>
+    <string name="click_continue">Click the button to continue</string>
+    <string name="continue_text">continue</string>
+    <string name="floating_action_button">floating action button</string>
+    <string name="shoe_x">Shoe X</string>
+    <string name="one_dollar">$1.00</string>
+    <string name="allstar">Allstar</string>
+    <string name="boot">Boot</string>
+    <string name="flipflop">Flipflop</string>
+    <string name="high_heel">High heel</string>
+    <string name="leather_shoe">Leather shoe</string>
+    <string name="shoe_type">Shoe Type</string>
+    <string name="shoe_model_name">Model name</string>
+    <string name="add_shoe">Add shoe</string>
+    <string name="shoe_model">Shoe model</string>
+    <string name="logout">Logout</string>
+
+    <array name="shoeTypes">
+        <item>@string/allstar</item>
+        <item>@string/boot</item>
+        <item>@string/flipflop</item>
+        <item>@string/high_heel</item>
+        <item>@string/leather_shoe</item>
+    </array>
+
 </resources>
