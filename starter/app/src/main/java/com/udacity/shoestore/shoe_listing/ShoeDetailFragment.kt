@@ -7,14 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import androidx.core.view.get
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
-import com.udacity.shoestore.databinding.FragmentShoeListingBinding
 import kotlinx.android.synthetic.main.fragment_shoe_detail.view.*
 
 /**
@@ -54,27 +51,11 @@ class ShoeDetailFragment : Fragment(), AdapterView.OnItemSelectedListener {
         binding.shoeSpinner.onItemSelectedListener = this
         binding.shoeSpinner.adapter = adapter
 
-        //setvalue for default spinner item
-        shoeType= getString(R.string.allstar)
-
-
-
-
         //listener for add show and return to listing
         binding.addShoeButton.setOnClickListener {
-            val shoeName: String = binding.editTextShoeModel.text.toString()
+            val name= binding.editTextShoeModel.text.toString()
+            viewModel.addShoe(name,shoeType)
 
-            val shoeTypeId = when (this.shoeType) {
-                getString(R.string.allstar) -> R.drawable.allstar
-                getString(R.string.boot) -> R.drawable.boot
-                getString(R.string.flipflop) -> R.drawable.flipflop
-                getString(R.string.high_heel) -> R.drawable.highheel
-                getString(R.string.leather_shoe) -> R.drawable.leathershoe
-                else -> R.drawable.questionmark
-            }
-
-            val newShoe = Shoe(shoeName,shoeTypeId)
-            viewModel.addShoe(newShoe)
 
             //navigate to listing fragment
             val action = R.id.action_shoeDetailFragment_to_shoeListingFragment

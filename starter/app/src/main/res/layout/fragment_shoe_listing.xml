@@ -17,7 +17,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:context=".shoe_listing.ShoeListingFragment">
-
+            <!--linear layout works fine with container for child views with linear placement -->
             <LinearLayout
                 android:id="@+id/shoeContainer"
                 android:layout_width="match_parent"

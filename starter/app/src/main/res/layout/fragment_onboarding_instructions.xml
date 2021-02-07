@@ -2,43 +2,43 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <!--used constraintlayout because of preference, but linearlayout would work as well here -->
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".onboarding.OnboardingInstructionsFragment">
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   tools:context=".onboarding.OnboardingInstructionsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textView"
-        style="@style/large_text"
-        android:text="@string/onboarding_instructions"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32999998" />
+   <TextView
+       android:id="@+id/textView"
+       style="@style/large_text"
+       android:text="@string/onboarding_instructions"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.32999998" />
 
-    <TextView
-        android:id="@+id/text_enter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        style ="@style/title_text"
-        android:text="@string/enter_the_store"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+   <TextView
+       android:id="@+id/text_enter"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="32dp"
+       style ="@style/title_text"
+       android:text="@string/enter_the_store"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/enter"
-        style ="@style/button_style"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_enter" />
+   <Button
+       android:id="@+id/button"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="8dp"
+       android:text="@string/enter"
+       style ="@style/button_style"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/text_enter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

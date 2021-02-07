@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-    
+
+    <data>
+        <variable
+            name="shoeData"
+            type="com.udacity.shoestore.shoe_listing.ShoeData" />
+    </data>
+
+    <!--used constraintlayout because of ease of positioning elements both horizontally as vertically -->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -28,7 +35,6 @@
         android:layout_marginStart="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/shoe_model"
         app:layout_constraintBottom_toBottomOf="@+id/shoe_model_name"
         app:layout_constraintStart_toEndOf="@+id/shoe_model_name"
         app:layout_constraintTop_toTopOf="@+id/shoe_model_name" />
