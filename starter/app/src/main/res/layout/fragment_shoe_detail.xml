@@ -3,8 +3,8 @@
 
     <data>
         <variable
-            name="shoeData"
-            type="com.udacity.shoestore.shoe_listing.ShoeData" />
+            name="shoeViewModel"
+            type="com.udacity.shoestore.shoe_listing.ShoeListingViewModel" />
     </data>
 
     <!--used constraintlayout because of ease of positioning elements both horizontally as vertically -->
@@ -34,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:ems="10"
+        android:text="@={shoeViewModel.shoeModelText}"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="@+id/shoe_model_name"
         app:layout_constraintStart_toEndOf="@+id/shoe_model_name"

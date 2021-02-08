@@ -35,6 +35,8 @@ class ShoeDetailFragment : Fragment(), AdapterView.OnItemSelectedListener {
         )
 
         val viewModel = ViewModelProvider(requireActivity()).get(ShoeListingViewModel::class.java)
+        binding.shoeViewModel =viewModel
+        //binding.setLifecycleOwner(this)
 
         //setup of spinner
         val adapter = context?.let {
@@ -54,7 +56,7 @@ class ShoeDetailFragment : Fragment(), AdapterView.OnItemSelectedListener {
         //listener for add show and return to listing
         binding.addShoeButton.setOnClickListener {
             val name= binding.editTextShoeModel.text.toString()
-            viewModel.addShoe(name,shoeType)
+            viewModel.addShoe(shoeType)
 
 
             //navigate to listing fragment
