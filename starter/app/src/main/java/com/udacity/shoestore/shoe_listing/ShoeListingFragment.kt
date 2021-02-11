@@ -19,6 +19,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import com.udacity.shoestore.models.Shoe
 
 
 class ShoeListingFragment : Fragment() {
@@ -69,14 +71,20 @@ class ShoeListingFragment : Fragment() {
             )
 
             // Find the text view from shoe layout and set text
-            val label = view.findViewById<TextView>(R.id.shoeNameText)
-            label.text = shoe.name
+            val shoeNameText = view.findViewById<TextView>(R.id.shoeNameText)
+            val nameContent = "Name: ${shoe.name}"
+            shoeNameText.text = nameContent
 
-            // Get the ImageView from shoe layout
-            val imageView = view.findViewById<ImageView>(R.id.shoeImageView)
+            val shoeSizeText = view.findViewById<TextView>(R.id.shoeSizeText)
+            val sizeContent = "Size: ${shoe.size}"
+            shoeSizeText.text = sizeContent
 
-            // Set a shoe image to image view resource
-            imageView.setImageResource(shoe.imageResource)
+            val shoeCompanyText = view.findViewById<TextView>(R.id.shoeCompanyText)
+            val companyContent = "Brand: ${shoe.company}"
+            shoeCompanyText.text = companyContent
+
+            val shoeDescriptionText = view.findViewById<TextView>(R.id.shoeDescriptionText)
+            shoeDescriptionText.text = shoe.description
 
             // Finally, add the shoe item layout to the layout in the scrollview
             binding.shoeContainer.addView(view, 0)
@@ -86,7 +94,8 @@ class ShoeListingFragment : Fragment() {
 
     //handle navigation for overflow menu items (currently to login fragment)
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+        val navController = requireView().findNavController()
+        return NavigationUI.onNavDestinationSelected(item, navController)
                 || super.onOptionsItemSelected(item)
     }
 

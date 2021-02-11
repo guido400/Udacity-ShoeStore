@@ -1,6 +1,4 @@
-package com.udacity.shoestore.shoe_listing
 
-data class Shoe (
-        val name:String,
-        val imageResource:Int
-        )
+package com.udacity.shoestore.models
+
+data class Shoe(var name: String, var size: Int, var company: String, var description: String)

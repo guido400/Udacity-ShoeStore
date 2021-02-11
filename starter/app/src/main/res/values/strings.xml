@@ -28,6 +28,10 @@
     <string name="add_shoe">Add shoe</string>
     <string name="shoe_model">Shoe model</string>
     <string name="logout">Logout</string>
+    <string name="shoe_size">Size</string>
+    <string name="shoe_company">Company</string>
+    <string name="shoe_description">Description</string>
+    <string name="cancel">Cancel</string>
 
     <array name="shoeTypes">
         <item>@string/allstar</item>

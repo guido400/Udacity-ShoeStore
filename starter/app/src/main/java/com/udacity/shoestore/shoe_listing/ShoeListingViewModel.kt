@@ -6,41 +6,34 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.udacity.shoestore.R
+import com.udacity.shoestore.models.Shoe
 
 
 class ShoeListingViewModel(application: Application): AndroidViewModel(application){
 
-    val shoeModelText = MutableLiveData<String>("")
+    val shoeNameText = MutableLiveData<String>("")
+    val shoeSizeText = MutableLiveData<String>("")
+    val shoeCompanyText = MutableLiveData<String>("")
+    val shoeDescriptionText = MutableLiveData<String>("")
 
     @SuppressLint("StaticFieldLeak")
     private val context = getApplication<Application>().applicationContext
-
 
     private val _shoeList = MutableLiveData<MutableList<Shoe>>()
     val shoeList: LiveData<MutableList<Shoe>>
         get() = _shoeList
 
-    fun addShoe(shoeType: String) {
-        val shoeTypeId = when (shoeType) {
-            context.getString(R.string.allstar) -> R.drawable.allstar
-            context.getString(R.string.boot) -> R.drawable.boot
-            context.getString(R.string.flipflop) -> R.drawable.flipflop
-            context.getString(R.string.high_heel) -> R.drawable.highheel
-            context.getString(R.string.leather_shoe) -> R.drawable.leathershoe
-            else -> R.drawable.questionmark
-        }
+    fun addShoe() {
+        val shoeSizeInt = shoeSizeText.value?.toInt() ?: 0
 
-
-        val newShoe = Shoe(shoeModelText.value.toString(), shoeTypeId)
-
+        val newShoe = Shoe(shoeNameText.value.toString(),
+            shoeSizeInt,
+            shoeCompanyText.value.toString(),
+            shoeDescriptionText.value.toString())
 
         val list = _shoeList.value ?: mutableListOf()
         list.add(newShoe)
         _shoeList.value = list
     }
-
-
-
-
 }
 
